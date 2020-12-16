@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="library.css">
+<meta charset = "UTF-8" />
+
+<style>
+
+</style>
+</head>
+<body>
+
+<h2>My simple library</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" value="" style="width:auto;">Add Book</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" id="modalForm">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" data-dismiss="modal" class="close" title="Close form">&times;</span>
+     
+    </div>
+
+    <div class="container">
+      <label for="bTitle"><b>Book Title</b></label>
+      <input type="text" value ="" placeholder="Enter Book Title" name="bTitle" id="bTitle" required>
+
+      <label for="bAuthor"><b>Book Author</b></label>
+      <input type="text" value ="" placeholder="Enter Book Author" name="bAuthor" id="bAuthor" required>
+
+      <label for="bPages"><b>No Of Pages</b></label>
+      <input type="text" value ="" placeholder="Enter no of pages" name="bPages" id="bPages" required>
+
+      <label for="read">Have you read this book?:</label>
+        <select id="bRead" name="bRead">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        
+      <button type="button" onclick="validate()">Save</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+
+<div id="container">
+
+</div>
+
+
+</body>
+<script src="library.js"></script> 
+</html>
